@@ -48,8 +48,9 @@ table {
   box-sizing: border-box;
 }
 
-div {
-  display: block;
+body {
+  padding: 0;
+  margin: 0;
 }
 
 div.calc {
@@ -62,8 +63,6 @@ div.calc {
 /* result screen  */
 
 .screen {
-  display: block;
-  color: white;
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
   text-align: right;
@@ -81,18 +80,23 @@ div.calc {
 
 /* calculator buttons design */
 
-.double {
-  width: 49.7%;
-}
-
 .calc-btn {
+  width: 24.5%;
+  height: 100px;
   background-color: #d8d9db;
   color: black;
-  height: 100px;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   font-size: 40px;
   cursor: pointer;
+}
+
+.calc-btn:hover {
+  background-color: background-color: #ebebeb;
+}
+
+.calc-btn:active {
+  background-color: #ebebeb;
 }
 
 .calc-btn:last-child {
@@ -100,8 +104,27 @@ div.calc {
   color: white;
 }
 
+.calc-btn:last-child:hover {
+  background-color: #dfb07e;
+}
+
+.calc-btn:last-child:active {
+  background-color: #dd8d37;
+}
+
+.double {
+  width: 49.7%;
+}
+
 .triple {
   width: 74.8%;
+}
+
+.calc-btn-row {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  margin-bottom: 0.5%;
 }
 
 
